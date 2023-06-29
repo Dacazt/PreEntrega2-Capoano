@@ -1,0 +1,280 @@
+$color-white: #ffffff;
+$color-black: #000000;
+$color-gradient-start: #000000;
+$color-gradient-end: #520055a6;
+$color-brown: brown;
+$color-shadow: white;
+$color-overlay-bg: rgba(0, 0, 0, 0.7);
+
+* {
+    padding: 0;
+    margin: 0;
+    color: $color-white;
+}
+
+body {
+    background: black;
+    min-height: 100vh;
+}
+
+/* ESTILOS GENERALES ---------------------------------------- */
+
+.btn {
+    background-color: $color-black;
+    color: $color-white;
+    border: 1px solid $color-white;
+
+    &:hover {
+        background-color: $color-black;
+        border: 1px solid rgb(0, 0, 0);
+        box-shadow: 0px 0px 10px 0px $color-white;
+    }
+}
+
+.brd {
+    box-shadow: 0px 0px 15px 0px $color-shadow;
+    border-radius: 15px;
+}
+
+.bg-custom {
+    background: linear-gradient($color-gradient-start, $color-gradient-end);
+}
+
+.container .text-white,
+.container .text-white h3,
+.container .text-white p {
+    color: $color-white;
+}
+
+.s-logo {
+    width: 130px;
+}
+
+.nav-item:hover {
+    background-color: $color-brown;
+}
+
+.container {
+    padding-top: 20px;
+}
+
+.custom-card {
+    position: relative;
+    overflow: hidden;
+
+    .card-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        background-color: $color-overlay-bg;
+        opacity: 0;
+        transition: opacity 0.3s ease;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        color: $color-white;
+        text-align: center;
+
+        h5,
+        p {
+            margin: 0;
+        }
+    }
+
+    &:hover {
+        .card-overlay {
+            opacity: 1;
+        }
+    }
+}
+
+.social-icons {
+    display: flex;
+    justify-content: space-evenly;
+    background-color: rgba(0, 0, 0, 0);
+
+    .social-icon {
+        margin: 0 5px;
+
+        img {
+            width: 50px;
+            height: 50px;
+        }
+    }
+}
+
+/* F O O T E R */
+
+footer {
+    bottom: 0;
+    left: 0;
+    width: 100%;
+}
+
+/* ESTILOS INDEX ---------------------------- */
+
+.custom-discontainer {
+    max-width: max-content;
+}
+
+.custom-list li {
+    padding-top: 0.3em;
+}
+
+/* ESTILOS CONTACTO ------------------------- */
+
+.vertical-divider {
+    height: 100%;
+    border-left: 1px solid #ddd;
+    margin: 0 15px;
+}
+
+.custom-form {
+    width: 750px;
+    background: linear-gradient($color-gradient-start, $color-gradient-end);
+
+    .form-control {
+        background-color: $color-black;
+    }
+}
+
+/* ESTILOS FECHAS ---------------------------------------- */
+
+.container-tour {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    gap: 1em;
+    padding: 2em;
+}
+
+.tour-box {
+    width: 80%;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+    gap: 2em;
+
+    .tour-box-date {
+        p {
+            margin: 0;
+        }
+
+        hr {
+            margin: 0.2em;
+        }
+    }
+}
+
+/* ESTILOS GALERIA -------------------------------------------------- */
+
+.main-galery {
+    display: flex;
+    justify-content: center;
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(3, 200px);
+        grid-template-rows: repeat(3, 200px);
+        gap: 5px;
+        padding: 5px;
+        grid-auto-flow: row;
+
+        .img-1 {
+            grid-area: img-1;
+        }
+
+        .img-2 {
+            grid-area: img-2;
+        }
+
+        .img-3 {
+            grid-area: img-3;
+        }
+
+        .img-4 {
+            grid-area: img-4;
+        }
+
+        .img-5 {
+            grid-area: img-5;
+        }
+
+        .img-6 {
+            grid-area: img-6;
+        }
+
+        .img-7 {
+            grid-area: img-7;
+        }
+
+        .img-8 {
+            grid-area: img-8;
+        }
+
+        .img-9 {
+            grid-area: img-9;
+        }
+    }
+}
+
+/* MQ p Responsive ----------------+++++++++++++ */
+
+@media (max-width: 768px) {
+    .custom-disco {
+        padding: 0;
+        margin: 0;
+    }
+
+    .custom-temas {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .custom-form {
+        width: 90%;
+    }
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(5, 200px);
+        gap: 5px;
+        grid-auto-flow: row;
+
+        .img-9 {
+            img {
+                width: 400px;
+                height: 200px;
+            }
+        }
+    }
+}
+
+@media (max-width: 500px) {
+    .custom-disco {
+        padding: 0;
+        margin: 0;
+    }
+
+    .social-icons {
+        justify-content: space-evenly;
+    }
+
+    .custom-form {
+        width: 90%;
+    }
+
+    .tour-box {
+        width: 100%;
+        margin: 0;
+        padding: 0;
+        display: flex;
+        flex-direction: column;
+        padding: 0.2em;
+    }
+}

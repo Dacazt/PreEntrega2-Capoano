@@ -9,7 +9,8 @@ body {
     min-height: 100vh;
 }
 
-/* ESTILOS GENERALES */
+/* ESTILOS GENERALES ---------------------------------------- */
+
 .btn {
     background-color: #000000;
     color: #ffffff;
@@ -18,7 +19,7 @@ body {
 
 .btn:hover {
     background-color: #000000;
-    border: 1px solid #000000;
+    border: 1px solid rgb(0, 0, 0);
     box-shadow: 0px 0px 10px 0px white;
 }
 
@@ -96,22 +97,25 @@ body {
 }
 
 /* F O O T E R */
+
 footer {
     bottom: 0;
     left: 0;
     width: 100%;
 }
 
-/* ESTILOS INDEX */
-.custom-discontainer {
+/* ESTILOS INDEX ---------------------------- */
+
+.custom-discontainer{
     max-width: max-content;
 }
 
 .custom-list li {
-    padding-top: 0.3em;
+    padding-top: .3em;
 }
 
-/* ESTILOS CONTACTO */
+/* ESTILOS CONTACTO ------------------------- */
+
 .vertical-divider {
     height: 100%;
     border-left: 1px solid #ddd;
@@ -127,7 +131,8 @@ footer {
     background-color: #000000;
 }
 
-/* ESTILOS FECHAS */
+/* ESTILOS FECHAS ---------------------------------------- */
+
 .container-tour {
     display: flex;
     align-items: center;
@@ -149,10 +154,11 @@ footer {
 }
 
 .tour-box-date hr {
-    margin: 0.2em;
+    margin: .2em;
 }
 
-/* ESTILOS GALERIA */
+/* ESTILOS GALERIA -------------------------------------------------- */
+
 .main-galery {
     display: flex;
     justify-content: center;
@@ -160,9 +166,9 @@ footer {
 
 .grid-container {
     display: grid;
-    grid-template-columns: repeat(3, 200px);
-    grid-template-rows: repeat(3, 200px);
-    gap: 5px;
+    grid-template-columns: 200px 200px 200px;
+    grid-template-rows: 200px 200px 200px;
+    gap: 5px 5px;
     padding: 5px;
     grid-auto-flow: row;
     grid-template-areas:
@@ -207,7 +213,8 @@ footer {
     grid-area: img-9;
 }
 
-/* MQ p Responsive */
+/* MQ p Responsive ----------------+++++++++++++ */
+
 @media (max-width: 768px) {
     .custom-disco {
         padding: 0;
@@ -220,15 +227,16 @@ footer {
         align-items: center;
     }
 
+
     .custom-form {
         width: 90%;
     }
 
     .grid-container {
         display: grid;
-        grid-template-columns: repeat(2, 200px);
+        grid-template-columns: 200px 200px;
         grid-template-rows: repeat(5, 200px);
-        gap: 5px;
+        gap: 5px 5px;
         grid-auto-flow: row;
         grid-template-areas:
             "img-1 img-2"
@@ -264,6 +272,6 @@ footer {
         padding: 0;
         display: flex;
         flex-direction: column;
-        padding: 0.2em;
+        padding: .2em;
     }
 }

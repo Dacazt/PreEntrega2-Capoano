@@ -6,20 +6,7 @@ $color-brown: brown;
 $color-shadow: white;
 $color-overlay-bg: rgba(0, 0, 0, 0.7);
 
-* {
-    padding: 0;
-    margin: 0;
-    color: $color-white;
-}
-
-body {
-    background: black;
-    min-height: 100vh;
-}
-
-/* ESTILOS GENERALES ---------------------------------------- */
-
-.btn {
+@mixin btn-style {
     background-color: $color-black;
     color: $color-white;
     border: 1px solid $color-white;
@@ -31,13 +18,36 @@ body {
     }
 }
 
-.brd {
+@mixin brd-style {
     box-shadow: 0px 0px 15px 0px $color-shadow;
     border-radius: 15px;
 }
 
-.bg-custom {
+@mixin bg-custom-style {
     background: linear-gradient($color-gradient-start, $color-gradient-end);
+}
+
+* {
+    padding: 0;
+    margin: 0;
+    color: $color-white;
+}
+
+body {
+    background: black;
+    min-height: 100vh;
+}
+
+.btn {
+    @include btn-style;
+}
+
+.brd {
+    @include brd-style;
+}
+
+.bg-custom {
+    @include bg-custom-style;
 }
 
 .container .text-white,
@@ -106,15 +116,11 @@ body {
     }
 }
 
-/* F O O T E R */
-
 footer {
     bottom: 0;
     left: 0;
     width: 100%;
 }
-
-/* ESTILOS INDEX ---------------------------- */
 
 .custom-discontainer {
     max-width: max-content;
@@ -123,8 +129,6 @@ footer {
 .custom-list li {
     padding-top: 0.3em;
 }
-
-/* ESTILOS CONTACTO ------------------------- */
 
 .vertical-divider {
     height: 100%;
@@ -140,8 +144,6 @@ footer {
         background-color: $color-black;
     }
 }
-
-/* ESTILOS FECHAS ---------------------------------------- */
 
 .container-tour {
     display: flex;
@@ -168,8 +170,6 @@ footer {
         }
     }
 }
-
-/* ESTILOS GALERIA -------------------------------------------------- */
 
 .main-galery {
     display: flex;
@@ -217,11 +217,14 @@ footer {
 
         .img-9 {
             grid-area: img-9;
+
+            img {
+                width: 400px;
+                height: 200px;
+            }
         }
     }
 }
-
-/* MQ p Responsive ----------------+++++++++++++ */
 
 @media (max-width: 768px) {
     .custom-disco {

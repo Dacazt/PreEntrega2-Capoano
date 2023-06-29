@@ -149,6 +149,7 @@ footer {
   gap: 5px;
   padding: 5px;
   grid-auto-flow: row;
+  grid-template-areas: "img-1 img-2 img-3" "img-4 img-5 img-6" "img-7 img-8 img-9";
 }
 .main-galery .grid-container .img-1 {
   grid-area: img-1;
@@ -177,10 +178,6 @@ footer {
 .main-galery .grid-container .img-9 {
   grid-area: img-9;
 }
-.main-galery .grid-container .img-9 img {
-  width: 400px;
-  height: 200px;
-}
 
 @media (max-width: 768px) {
   .custom-disco {
@@ -201,6 +198,7 @@ footer {
     grid-template-rows: repeat(5, 200px);
     gap: 5px;
     grid-auto-flow: row;
+    grid-template-areas: "img-1 img-2" "img-3 img-4" "img-5 img-6" "img-7 img-8" "img-9 img-9";
   }
   .grid-container .img-9 img {
     width: 400px;
@@ -208,6 +206,18 @@ footer {
   }
 }
 @media (max-width: 500px) {
+  .grid-container {
+    display: grid;
+    grid-template-columns: repeat(2, 200px);
+    grid-template-rows: repeat(5, 200px);
+    gap: 5px;
+    grid-auto-flow: row;
+    grid-template-areas: "img-1 img-2" "img-3 img-4" "img-5 img-6" "img-7 img-8" "img-9 img-9";
+  }
+  .grid-container .img-9 img {
+    width: 400px;
+    height: 200px;
+  }
   .custom-disco {
     padding: 0;
     margin: 0;

@@ -183,6 +183,11 @@ footer {
         padding: 5px;
         grid-auto-flow: row;
 
+        grid-template-areas:
+            "img-1 img-2 img-3"
+            "img-4 img-5 img-6"
+            "img-7 img-8 img-9";
+
         .img-1 {
             grid-area: img-1;
         }
@@ -217,11 +222,6 @@ footer {
 
         .img-9 {
             grid-area: img-9;
-
-            img {
-                width: 400px;
-                height: 200px;
-            }
         }
     }
 }
@@ -248,6 +248,12 @@ footer {
         grid-template-rows: repeat(5, 200px);
         gap: 5px;
         grid-auto-flow: row;
+        grid-template-areas:
+            "img-1 img-2"
+            "img-3 img-4"
+            "img-5 img-6"
+            "img-7 img-8"
+            "img-9 img-9";
 
         .img-9 {
             img {
@@ -259,6 +265,28 @@ footer {
 }
 
 @media (max-width: 500px) {
+
+    .grid-container {
+        display: grid;
+        grid-template-columns: repeat(2, 200px);
+        grid-template-rows: repeat(5, 200px);
+        gap: 5px;
+        grid-auto-flow: row;
+        grid-template-areas:
+            "img-1 img-2"
+            "img-3 img-4"
+            "img-5 img-6"
+            "img-7 img-8"
+            "img-9 img-9";
+
+        .img-9 {
+            img {
+                width: 400px;
+                height: 200px;
+            }
+        }
+    }
+
     .custom-disco {
         padding: 0;
         margin: 0;

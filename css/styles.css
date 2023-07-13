@@ -9,6 +9,16 @@ body {
   min-height: 100vh;
 }
 
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  color: black;
+  text-shadow: 2px 2px 0 #ffffff, -2px -2px 0 white, 2px -2px 0 white, -2px 2px 0 white;
+}
+
 .btn {
   background-color: #000000;
   color: #ffffff;
@@ -114,6 +124,7 @@ footer {
 }
 .custom-form .form-control {
   background-color: #000000;
+  color: white;
 }
 
 .container-tour {
@@ -138,47 +149,6 @@ footer {
   margin: 0.2em;
 }
 
-.main-galery {
-  display: flex;
-  justify-content: center;
-}
-.main-galery .grid-container {
-  display: grid;
-  grid-template-columns: repeat(3, 200px);
-  grid-template-rows: repeat(3, 200px);
-  gap: 5px;
-  padding: 5px;
-  grid-auto-flow: row;
-  grid-template-areas: "img-1 img-2 img-3" "img-4 img-5 img-6" "img-7 img-8 img-9";
-}
-.main-galery .grid-container .img-1 {
-  grid-area: img-1;
-}
-.main-galery .grid-container .img-2 {
-  grid-area: img-2;
-}
-.main-galery .grid-container .img-3 {
-  grid-area: img-3;
-}
-.main-galery .grid-container .img-4 {
-  grid-area: img-4;
-}
-.main-galery .grid-container .img-5 {
-  grid-area: img-5;
-}
-.main-galery .grid-container .img-6 {
-  grid-area: img-6;
-}
-.main-galery .grid-container .img-7 {
-  grid-area: img-7;
-}
-.main-galery .grid-container .img-8 {
-  grid-area: img-8;
-}
-.main-galery .grid-container .img-9 {
-  grid-area: img-9;
-}
-
 @media (max-width: 768px) {
   .custom-disco {
     padding: 0;
@@ -192,32 +162,14 @@ footer {
   .custom-form {
     width: 90%;
   }
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 200px);
-    grid-template-rows: repeat(5, 200px);
-    gap: 5px;
-    grid-auto-flow: row;
-    grid-template-areas: "img-1 img-2" "img-3 img-4" "img-5 img-6" "img-7 img-8" "img-9 img-9";
-  }
-  .grid-container .img-9 img {
-    width: 400px;
-    height: 200px;
-  }
 }
+.carousel-item img {
+  max-width: 100%;
+  height: auto;
+  margin: 0 auto;
+}
+
 @media (max-width: 500px) {
-  .grid-container {
-    display: grid;
-    grid-template-columns: repeat(2, 200px);
-    grid-template-rows: repeat(5, 200px);
-    gap: 5px;
-    grid-auto-flow: row;
-    grid-template-areas: "img-1 img-2" "img-3 img-4" "img-5 img-6" "img-7 img-8" "img-9 img-9";
-  }
-  .grid-container .img-9 img {
-    width: 400px;
-    height: 200px;
-  }
   .custom-disco {
     padding: 0;
     margin: 0;
